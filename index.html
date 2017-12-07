@@ -7,28 +7,90 @@
 	<!-- Bootstrap CDN -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+	
 </head>
 <body>
 
+<div class="container">
+	<div class="jumbotron">
+		<h1 class="text-center">Any Time is Train Time</h1>
+	</div>
 
-	<div class="container">
-		<div class="jumbotron">
-			<h1 class="text-center">Any Time is Train Time</h1>
-		</div>
-	
-	<!-- Row 1: -->
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">Current Train Schedule:</h3>
+<!-- Row 1: -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Current Train Schedule:</h3>
+				</div>
+
+					<div class="panel-body">
+						<table>
+							<tr>
+								<th>Train Name:</th>
+								<th>Destination:</th>
+								<th>Frequency (min):</th>
+								<th>Next Arrival:</th>
+								<th>Minutes Away:</th>
+							<tr>
+							<tr>
+								<td id="trainNameData">Trenton Express</td>
+								<td id="trainDestinationData">Trenton</td>
+								<td id="trainFrequencyData">25</td>
+								<td id="trainNextArrivalData">05:35 PM</td>
+								<td id="trainMinutesAwayData">10</td>
+							</tr>
+						</table>
 					</div>
 
+
+
+			</div>
+		</div>
+		<!-- Form for submission -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Add Train:</h3>
+				</div>
+
+				<div class="panel-body">
+					<!-- form for submission -->
+					<form>
+						<div class="form-group">
+							<label for="train-name">Train Name:</label>
+							<br>
+							<input type="text" id="train-Name-input">
+						</div>
+
+						<div class="form-group">
+							<label for="train-destination">Destination:</label>
+							<br>
+							<input type="text" id="train-Destination-Input">
+						</div>
+
+						<div class="form-group">
+							<label for="first-trian-time">First Train Time (HH:mm - military time):</label>
+							<br>
+							<input type="text" id="first-Train-input">
+						</div>
+
+						<div class="form-group">
+							<label for="frequency">Frequency (min):</label>
+							<br>
+							<input type="text" id="train-Frequency-input">
+						</div>
+
+						<button type="submit" class="btn btn-default" id="run-search">Submit</button>
+					</form>
 				</div>
 			</div>
-
 		</div>
-	</div>
+
+	</div>	
+	
+</div>
 
 
 
