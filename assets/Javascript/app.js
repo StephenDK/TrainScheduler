@@ -79,8 +79,40 @@ $("#run-Search").on("click", function(event){
 		var tName = childSnapshot.val().name;
 		var tDestination = childSnapshot.val().destination;
 		var tFrequency = childSnapshot.val().frequency;
+		var headTrain = childSnapshot.val().firstTrain;
 
-	})
+		// testing and debugging
+		console.log(tName);
+		console.log(tDestination);
+		console.log(tFrequency);
+		console.log(headTrain);
+
+		var trainTimeFormat = headTrain.split(":");
+		var trainTime = moment().hours(trainTimeFormat[0]).minutes(trainTimeFormat[1]);
+		var maxiumMoment = moment.max(moment(), trainTime);
+		var tMinutes;
+		var tArrival;
+
+		if (maxiumMoment === trainTime) {
+			tArrival = trainTime.format("hh:mm A");
+			tMinutes = trainTime.diff(moment(), "minutes");
+		} else {
+			// Calculate minutes till arrival
+			var differenceTimes = moment().diff(trainTime, "minutes");
+			var tRemainder = differenceTimes % tFrequency;
+			tMinutes = tFrequency - tRemainder;
+
+			// to get arrival time add current time to tMinutes
+			tArrival = moment().add(tMinutes, "m").format("hh:mm A");
+		}
+
+		// tests and debugging
+		console.log("tMinutes:", tMinutes);
+		console.log("tArrival:", tArrival);
+
+		// add train data to the table
+		$("#train-Table > tbody").append("<tr><td>" + tName + "</td><td>" + tDestination + "</td><td>" + tFrequency + "</td><td>" + tArrival + "</td><td>" + tMinutes + "</td></tr>")
+	});
 
 
 

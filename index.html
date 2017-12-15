@@ -7,11 +7,17 @@
 	<!-- Bootstrap CDN -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+	<!-- Link to styles.css -->
+	<link rel="stylesheet" type="text/css" href="assets/CSS/styles.css">
+
 	<!-- link to JQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Link to Moment.js-->
+  	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 	<!-- Link to Firebase  -->
-<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
 
 
 	
@@ -28,25 +34,25 @@
 		<div class="col-lg-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Current Train Schedule:</h3>
+					<h3 class="panel-title"><strong>Current Train Schedule:</strong></h3>
 				</div>
 
 					<div class="panel-body">
-						<table>
-							<tr>
-								<th>Train Name:</th>
-								<th>Destination:</th>
-								<th>Frequency (min):</th>
-								<th>Next Arrival:</th>
-								<th>Minutes Away:</th>
-							<tr>
-							<tr>
-								<td id="trainNameData">Trenton Express</td>
-								<td id="trainDestinationData">Trenton</td>
-								<td id="trainFrequencyData">25</td>
-								<td id="trainNextArrivalData">05:35 PM</td>
-								<td id="trainMinutesAwayData">10</td>
-							</tr>
+						<table id="train-Table">
+							<thead>
+								<tr>
+									<th>Train Name:</th>
+									<th>Destination:</th>
+									<th>Frequency (min):</th>
+									<th>Next Arrival:</th>
+									<th>Minutes Away:</th>
+								<tr>
+							</thead>
+							
+							<tbody>
+								
+								
+							</tbody>
 						</table>
 					</div>
 
@@ -55,11 +61,11 @@
 			</div>
 		</div>
 		<!-- Form for submission -->
-	<div class="row">
+	
 		<div class="col-lg-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Add Train:</h3>
+					<h3 class="panel-title"><strong>Add Train:</strong></h3>
 				</div>
 
 				<div class="panel-body">
@@ -94,8 +100,6 @@
 				</div>
 			</div>
 		</div>
-
-	</div>	
 	
 </div>
 
