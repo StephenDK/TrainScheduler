@@ -2,3 +2,33 @@ th {
 	padding-right: 75px;
 
 }
+
+#train-Table {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+
+#train-Table th {
+
+	border: 1px solid #ddd;
+}
+
+#train-Table tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+#train-Table tr:hover {
+	background-color: #ddd;
+}
+#train-Table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+
+#train-Name-Input {
+	width: 100%;
+}
+    
